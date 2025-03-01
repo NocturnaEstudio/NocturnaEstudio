@@ -16,9 +16,9 @@ header {
 }
 
 header img {
-    width: auto;
+    width: 150%;
     max-width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -225,3 +225,6 @@ img[src^="screenshot"] {
     margin: 10px 0;
     font-family: 'Tu-Fuente', sans-serif;
 }
+
+
+
