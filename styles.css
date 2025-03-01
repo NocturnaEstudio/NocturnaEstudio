@@ -208,6 +208,9 @@ img[src^="screenshot"] {
     position: relative;
     left: -200px; /* Ajusta según necesites */
 }
+.ldg-tumblr {
+    margin: 10px; /* ajusta el valor según sea necesario */
+}
 
 /* En móvil, que se mantenga centrado */
 @media (max-width: 768px) {
@@ -259,6 +262,3 @@ img[src^="screenshot"] {
     margin: 10px 0;
     font-family: 'Tu-Fuente', sans-serif;
 }
-
-
-
