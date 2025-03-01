@@ -1,0 +1,258 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Portmanteau', sans-serif;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 200px;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos del menú de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #666; /* Indica la página actual */
+}
+
+nav ul li a:hover {
+    background-color: #666;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+/* Estilos para la sección de proyectos */
+.currently-developing {
+    display: flex; /* Alinea los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permite que los elementos se apilen si el espacio es limitado */
+}
+
+.currently-developing div {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del cuadro */
+    text-align: left; /* Alinea el texto dentro del cuadro a la izquierda */
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .currently-developing {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+    }
+}
+
+
+/* Botón de cambio de idioma */
+#translate-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#translate-btn:hover {
+    background-color: #555;
+}
+/* Estilos del footer */
+.footer {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos principales en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+    padding: 20px;
+    background-color: #111;
+}
+
+.footer .social-icons {
+    display: flex; /* Mantiene los iconos en una fila horizontal */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 10px; /* Espacio entre los iconos */
+    margin-bottom: 15px; /* Espacio entre los iconos y el texto */
+}
+
+.footer a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.boton-youtube {
+    background-image: url('youtube.png');
+    background-size: 40px 40px;
+}
+.boton-instagram {
+    background-image: url('instagram.png');
+    background-size: 40px 40px;
+}
+.boton-twitter {
+    background-image: url('twitter.png');
+    background-size: 40px 40px;
+}
+
+.boton-itchio {
+    background-image: url('./itchio.png');
+    background-size: 40px 40px;
+}
+.boton-mail {
+    background-image: url('./mail.png');
+    background-size: 40px 40px;
+}
+/* Estilos para el texto de derechos de autor */
+.footer p {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    color: #ccc; /* Color más claro para el texto */
+    text-align: center; /* Alineación centrada */
+    margin: 0; /* Elimina el margen adicional */
+}
+ul, ol {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding-left: 20px; /* Añade espacio para los puntos/números */
+    list-style-position: inside; /* Controla la posición de los puntos */
+}
+
+li {
+    text-align: center; /* Asegura que el texto esté alineado correctamente */
+}
+#main-content-description {
+font-family: 'Merriweather', serif;
+line-height: 1.0; /* Aumenta el espacio entre líneas */
+font-size: 25px
+}
+img[src="screenshot1.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot2.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot3.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot4.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot5.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot6.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot7.png"] {
+width: 400px;
+height: auto;
+}
+img[src="screenshot8.png"] {
+width: 400px;
+height: auto;
+}
+.highlight-red {
+    color: #ff0000;
+}
+
+#main-content-aboutus1 {
+text-align: justify; /* Justifica el texto para evitar centrado */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina relleno adicional */
+ font-family: 'Merriweather', serif;
+ font-size: 23px;
+}
+
+#main-content-aboutus2 {
+text-align: justify; /* Justifica el texto para evitar centrado */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina relleno adicional */
+font-family: 'Merriweather', serif;
+font-size: 23px
+}
+#main-content-aboutus3 {
+font-family: 'Merriweather', serif;
+text-align: left;
+font-size: 23px
+}
+#main-content-aboutus4 {
+font-family: 'Merriweather', serif;
+text-align: right;
+}
+#main-content-aboutus5 {
+font-family: 'Merriweather', serif;
+text-align: left;
+font-size: 23px
+}
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-section details {
+    margin-bottom: 10px;
+}
+
+.faq-section summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Tu-Fuente', sans-serif; /* Asegúrate de poner la fuente que estás usando */
+}
+
+.faq-section p {
+    margin: 10px 0;
+    font-family: 'Tu-Fuente', sans-serif; /* Igualmente, pon la misma fuente aquí */
+}

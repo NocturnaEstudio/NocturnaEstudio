@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocturna Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Nocturna SW.svg" alt="Logo del Estudio">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Principal</a></li>
+            <li><a href="proyectos.html" id="nav-projects">Proyectos</a></li>
+           <li><a href="#" id="nav-download" onclick="alert('\uD83D\uDEA7 Apartado en construcción \uD83D\uDEA7 Vuelve pronto \uD83D\uDE03'); return false;">Descarga</a></li>
+            <li><a href="sobre-nosotros.html" id="nav-about">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <p id="main-content-aboutus1">
+    Nocturna Estudio es una desarrolladora de videojuegos independiente fundada por Emiliano N. González a mediados de 2024.
+        </p>
+<p id="main-content-aboutus2">
+   Inspirado por el inmenso potencial de los videojuegos como medio para contar historias, este humilde estudio nace con la misión de crear nuevos mundos y dar vida a sus leyendas, con el objetivo primordial de conectarlas con el corazón de las personas a través de experiencias inolvidables que resuenen en sus corazones. 
+ </p>
+ <p id="main-content-aboutus3">
+    Te invitamos a conocer nuestros trabajos aquí: <a href="proyectos.html" target="_blank" id="projects-link">Link</a>
+</p>
+<p id="main-content-aboutus5"> Para contactarte con nosotros puedes hacerlo vía <a href="mailto:contact@nocturnaestudio.online" id="email-link">email</a>, o también puedes seguirnos en las redes <a href="https://x.com/Nocturna_dev" target="_blank" id="twitter-link">Twitter</a>, <a href="(enlace de Youtube)" target="_blank" id="youtube-link">Youtube</a> e <a href="(enlace de Instagram)" target="_blank" id="instagram-link">Instagram</a>. </p>
+ <p id="main-content-aboutus4">
+       Nocturna Estudio(Emiliano.N.Gonzalez)
+        </p>
+</main>
+
+    <button id="translate-btn" aria-label="Cambiar idioma">Switch to English</button>
+
+<div class="footer">
+    <div class="social-icons">
+       <a href="mailto:contact@nocturnaestudio.online" class="boton-mail" aria-label="Email"></a>
+       <a href="https://www.youtube.com/@NocturnaEstudio" class="boton-youtube" aria-label="YouTube" target="_blank"></a>
+        <a href="https://www.instagram.com/nocturna_estudio/" class="boton-instagram" aria-label="Instagram" target="_blank"></a>
+        <a href="https://x.com/Nocturna_dev" class="boton-twitter" aria-label="Twitter" target="_blank"></a>
+       <a href="https://nocturna-estudio.itch.io/ " class="boton-itchio" aria-label="itchio" target="_blank"></a>
+    </div>
+    <p>Nocturna Estudio Official Website</p>
+</div>
+
+ <script>
+const translations = {
+    es: {
+        navHome: "Principal",
+        navProjects: "Proyectos",
+        navDownload: "Descarga",
+        navAbout: "Sobre Nosotros",
+        navContact: "Contacto",
+        mainContentAboutUs1: "Nocturna Estudio es una desarrolladora de videojuegos independiente fundada por Emiliano N. Gonzalez a mediados de 2024.",
+        mainContentAboutUs2: "Inspirado por el inmenso potencial de los videojuegos como medio para contar historias, este humilde estudio nace con la misión de crear nuevos mundos y dar vida a sus historias...",
+        mainContentAboutUs3: "Te invitamos a conocer nuestros trabajos aquí: ",
+        projectsLink: "Proyectos",
+        mainContentAboutUs5: "Para contactarte con nosotros puedes hacerlo vía ",
+        followUsOnSocialMedia: "O tambien nos puedes seguir en",
+        emailLink: "Email",
+        twitterLink: "Twitter",
+        youtubeLink: "YouTube",
+        instagramLink: "Instagram",
+        mainContentAboutUs4: "Nocturna Estudio (Emiliano N. González)",
+        translateBtn: "Cambiar a Español"
+    },
+    en: {
+        navHome: "Home",
+        navProjects: "Projects",
+        navDownload: "Download",
+        navAbout: "About Us",
+        navContact: "Contact",
+        mainContentAboutUs1: "Nocturna Estudio is an independent video game developer founded by Emiliano N. Gonzalez in mid-2024.",
+        mainContentAboutUs2: "Inspired by the immense potential of video games as a storytelling medium, this humble studio was born with the mission of creating new worlds and bringing their stories to life...",
+        mainContentAboutUs3: "We invite you to explore our work here: ",
+        projectsLink: "Projects",
+        mainContentAboutUs5: "To contact us, feel free to reach out via ",
+       followUsOnSocialMedia: "You can also follow us on",
+       emailLink: "Email",
+        twitterLink: "Twitter",
+        youtubeLink: "YouTube",
+        instagramLink: "Instagram",
+        mainContentAboutUs4: "Nocturna Estudio (Emiliano N. González)",
+        translateBtn: "Switch to Spanish"
+    }
+};
+
+// Recuperar idioma guardado o usar español por defecto
+let currentLanguage = localStorage.getItem('language') || 'es';
+
+const elementsToTranslate = {
+    navHome: document.getElementById('nav-home'),
+    navProjects: document.getElementById('nav-projects'),
+    navDownload: document.getElementById('nav-download'),
+    navAbout: document.getElementById('nav-about'),
+    navContact: document.getElementById('nav-contact'),
+    mainContentAboutUs1: document.getElementById('main-content-aboutus1'),
+    mainContentAboutUs2: document.getElementById('main-content-aboutus2'),
+    mainContentAboutUs3: document.getElementById('main-content-aboutus3'),
+    projectsLink: document.getElementById('projects-link'),
+    mainContentAboutUs5: document.getElementById('main-content-aboutus5'),
+    mainContentAboutUs4: document.getElementById('main-content-aboutus4'),
+    translateBtn: document.getElementById('translate-btn')
+};
+
+function applyTranslations(language) {
+    const translation = translations[language];
+    for (let key in elementsToTranslate) {
+        if (elementsToTranslate[key]) {
+            if (key === "mainContentAboutUs5") {
+                elementsToTranslate[key].innerHTML = `${translation[key]} <a href="mailto:contact@nocturnaestudio.online" id="email-link">${translation.emailLink}</a>. ${translation.followUsOnSocialMedia}: <a href="https://x.com/Nocturna_dev" target="_blank" id="twitter-link">${translation.twitterLink}</a>, <a href="https://www.youtube.com/@NocturnaEstudio" target="_blank" id="youtube-link">${translation.youtubeLink}</a>, <a href="https://www.instagram.com/nocturna_estudio/" target="_blank" id="instagram-link">${translation.instagramLink}</a>.`;
+            } else if (key === "mainContentAboutUs3") {
+                elementsToTranslate[key].innerHTML = `${translation.mainContentAboutUs3} <a href="proyectos.html" target="_blank" id="projects-link">${translation.projectsLink}</a>`;
+            } else if (key === "translateBtn") {
+                elementsToTranslate[key].textContent = translation.translateBtn;
+            } else {
+                elementsToTranslate[key].textContent = translation[key];
+            }
+        }
+    }
+    localStorage.setItem('language', language);
+}
+
+
+// Evento para cambiar el idioma al hacer clic en el botón
+document.getElementById('translate-btn').addEventListener('click', () => {
+    currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+    applyTranslations(currentLanguage);
+});
+
+// Aplicar la traducción inicial al cargar la página
+applyTranslations(currentLanguage);
+</script>
+
+</body>
+</html>
+ 

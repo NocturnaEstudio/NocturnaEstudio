@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocturna Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Nocturna SW.svg" alt="Logo del Estudio">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Principal</a></li>
+            <li><a href="proyectos.html" id="nav-projects">Proyectos</a></li>
+            <li><a href="#" id="nav-download" onclick="alert('\uD83D\uDEA7 Apartado en construcción \uD83D\uDEA7 Vuelve pronto \uD83D\uDE03'); return false;">Descarga</a></li>
+            <li><a href="sobre-nosotros.html" id="nav-about">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="currently-developing">
+            <div>
+                <h2 id="currently-developing-title">Actualmente en Desarrollo:</h2>
+               <img src="Progress.svg" />
+            </div>
+           
+        </div>
+    </main>
+
+    <button id="translate-btn" aria-label="Cambiar idioma">Switch to English</button>
+
+<div class="footer">
+    <div class="social-icons">
+       <a href="mailto:contact@nocturnaestudio.online" class="boton-mail" aria-label="Email"></a>
+       <a href="https://www.youtube.com/@NocturnaEstudio" class="boton-youtube" aria-label="YouTube" target="_blank"></a>
+        <a href="https://www.instagram.com/nocturna_estudio/" class="boton-instagram" aria-label="Instagram" target="_blank"></a>
+        <a href="https://x.com/Nocturna_dev" class="boton-twitter" aria-label="Twitter" target="_blank"></a>
+       <a href="https://nocturna-estudio.itch.io/ " class="boton-itchio" aria-label="itchio" target="_blank"></a>
+    </div>
+    <p>Nocturna Estudio Official Website</p>
+</div>
+
+
+
+    <script>
+        const translations = {
+            es: {
+                navHome: "Principal",
+                navProjects: "Proyectos",
+                navDownload: "Descarga",
+                navAbout: "Sobre Nosotros",
+                navContact: "Contacto",
+                currentlyDevelopingTitle: "Actualmente en Desarrollo:",
+                translateBtn: "Switch to English"
+            },
+            en: {
+                navHome: "Home",
+                navProjects: "Projects",
+                navDownload: "Download",
+                navAbout: "About Us",
+                navContact: "Contact",
+                currentlyDevelopingTitle: "Currently in Development:",
+                currentlyDevelopingDesc: "Updates on our projects will appear here soon.",
+                translateBtn: "Cambiar a Español"
+            }
+        };
+
+        // Recuperar idioma guardado o usar español por defecto
+        let currentLanguage = localStorage.getItem('language') || 'es';
+        const elementsToTranslate = {
+            navHome: document.getElementById('nav-home'),
+            navProjects: document.getElementById('nav-projects'),
+            navDownload: document.getElementById('nav-download'),
+            navAbout: document.getElementById('nav-about'),
+            navContact: document.getElementById('nav-contact'),
+            currentlyDevelopingTitle: document.getElementById('currently-developing-title'),
+            currentlyDevelopingDesc: document.getElementById('currently-developing-desc'),
+            translateBtn: document.getElementById('translate-btn')
+        };
+
+function applyTranslations(language) {
+    const translation = translations[language];
+    
+    for (let key in elementsToTranslate) {
+        if (elementsToTranslate[key]) {
+            if (key === "mainContentAboutUs5") {
+                elementsToTranslate[key].innerHTML = `${translation[key]} <a href="mailto:tuemail@dominio.com" id="email-link">${translation.emailLink}</a>. ${translation.followUsOnSocialMedia}: <a href="https://x.com/Nocturna_dev" target="_blank" id="twitter-link">${translation.twitterLink}</a>, <a href="https://www.youtube.com/@NocturnaEstudio" target="_blank" id="youtube-link">${translation.youtubeLink}</a>, <a href="https://www.instagram.com/nocturna_estudio/" target="_blank" id="instagram-link">${translation.instagramLink}</a>.`;
+            } else if (key === "mainContentAboutUs3") {
+                elementsToTranslate[key].innerHTML = `${translation.mainContentAboutUs3} <a href="proyectos.html" target="_blank" id="projects-link">${translation.projectsLink}</a>`;
+            } else if (key === "translateBtn") {
+                elementsToTranslate[key].textContent = translation.translateBtn; // Traduce el texto del botón
+            } else {
+                elementsToTranslate[key].textContent = translation[key];
+            }
+        }
+    }
+    localStorage.setItem('language', language);
+}
+
+// Evento para cambiar el idioma al hacer clic en el botón
+document.getElementById('translate-btn').addEventListener('click', () => {
+    currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+    applyTranslations(currentLanguage);
+});
+
+// Aplicar la traducción inicial al cargar la página
+applyTranslations(currentLanguage);
+    </script>
+</body>
+</html>

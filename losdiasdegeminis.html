@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los días de Géminis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Nocturna SW.svg" alt="Logo del Estudio">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Principal</a></li>
+            <li><a href="proyectos.html" id="nav-projects">Proyectos</a></li>
+            <li><a href="#" id="nav-download" onclick="alert('\uD83D\uDEA7 Apartado en construcción \uD83D\uDEA7 Vuelve pronto \uD83D\uDE03'); return false;">Descarga</a></li>
+            <li><a href="sobre-nosotros.html" id="nav-about">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+<main class="main-content">
+        <img src="g2.svg" />
+        <ul id="main-content-list">
+            <li>Aventura gráfica, Point & Click</li>
+            <li>Misterio, Ciencia ficción, Aventura</li>
+            <li>Disponible en Español e Inglés</li>
+            <li>Windows</li>
+        </ul>
+        <p id="main-content-description">
+            "Un día, radiotelescopios de todo el mundo captaron señales de origen desconocido y propiedades enigmáticas..."
+        </p>
+        <img src="screenshot1.png" />
+        <img src="screenshot2.png" />
+        <img src="screenshot3.png" />
+        <img src="screenshot4.png" />
+        <img src="screenshot5.png" />
+        <img src="screenshot6.png" />
+        <img src="screenshot7.png" />
+        <img src="screenshot8.png" />
+        
+        <section class="faq-section">
+            <h2 id="faq-title">FAQ sobre el lanzamiento del juego</h2>
+            <div id="faq-items">
+                <!-- FAQ items will go here -->
+            </div>
+        </section>
+    </main>
+
+    <button id="translate-btn" aria-label="Cambiar idioma">Switch to English</button>
+
+<div class="footer">
+    <div class="social-icons">
+       <a href="mailto:contact@nocturnaestudio.online" class="boton-mail" aria-label="Email"></a>
+       <a href="https://www.youtube.com/@NocturnaEstudio" class="boton-youtube" aria-label="YouTube" target="_blank"></a>
+        <a href="https://www.instagram.com/nocturna_estudio/" class="boton-instagram" aria-label="Instagram" target="_blank"></a>
+        <a href="https://x.com/Nocturna_dev" class="boton-twitter" aria-label="Twitter" target="_blank"></a>
+       <a href="https://nocturna-estudio.itch.io/ " class="boton-itchio" aria-label="itchio" target="_blank"></a>
+    </div>
+    <p>Nocturna Estudio Official Website</p>
+</div>
+
+    <script>
+        const translations = {
+            es: {
+                navHome: "Principal",
+                navProjects: "Proyectos",
+                navDownload: "Descarga",
+                navAbout: "Sobre Nosotros",
+                navContact: "Contacto",
+                mainContentList: [
+                    "Aventura gráfica, Point & Click",
+                    "Misterio, Ciencia ficción, Aventura",
+                    "Disponible en Español e Inglés",
+                    "Windows"
+                ],
+                mainContentDescription: `"Un día, radiotelescopios de todo el mundo captaron señales de origen desconocido y propiedades enigmáticas. Intrigados por este fenómeno, el Centro de Investigaciones Extracurriculares (C.I.E.), fundado por el joven Alterio Rossi junto a sus amigos Héctor Mora y Macarena Flores, decide intervenir para descifrar el misterio. Lo que comienza como una misión científica pronto se convierte en algo mucho más grande de lo que imaginaban: un enigmático correo, fuerzas ocultas que operan en las sombras y eventos más allá de la comprensión humana amenazan con poner en jaque la realidad misma. Prepárate para una aventura que desafiará los límites de lo conocido."`,
+                faqTitle: "FAQ sobre el lanzamiento del juego",
+                faqItems: [
+                    { question: "📌 ¿El juego saldrá completo o por capítulos?", answer: "El juego se lanzará en formato episódico. Esto significa que los capítulos se publicarán de manera progresiva." },
+                    { question: "📌 ¿Cuántos capítulos serán en total?", answer: "El juego contará con un total de seis o siete capítulos. Durante el avance del desarrollo, se brindará más información al respecto." },
+                    { question: "📌 ¿Cuándo saldrá el próximo capítulo?", answer: "Los capítulos serán lanzados entre intervalos de 3-4 meses, aunque también puede ser antes." },
+                    { question: "📌 ¿Los archivos de guardado funcionarán entre capítulos?", answer: "Lamentablemente, no se ha logrado conseguir la compatibilidad de los archivos de guardado entre las distintas versiones del juego, por lo que se recomienda terminar el capítulo previo antes de instalar la actualización." },
+                    { question: "📌 ¿El juego es gratis?", answer: "Si, hasta el lanzamiento del capítulo final el juego se podrá descargar de manera gratuita. Luego, se evaluará la posibilidad de poner un precio al juego completo." },
+                    { question: "📌 ¿Estará disponible en otros idiomas?", answer: "Por el momento, solo español e inglés." }
+                ],
+                translateBtn: "Switch to English"
+            },
+            en: {
+                navHome: "Home",
+                navProjects: "Projects",
+                navDownload: "Download",
+                navAbout: "About Us",
+                navContact: "Contact",
+                mainContentList: [
+                    "Graphic Adventure, Point & Click",
+                    "Mystery, Science Fiction, Adventure",
+                    "Available in Spanish and English",
+                    "Windows"
+                ],
+                mainContentDescription: `"One day, radio telescopes around the world picked up signals of unknown origin and enigmatic properties. Intrigued by this phenomenon, the Center for Inquiry on Extracurricular Studies (C.I.E.), founded by the young Alterio Rossi along with his friends Héctor Mora and Macarena Flores, decides to intervene to decipher the mystery. What begins as a scientific mission quickly turns into something much larger than they imagined: a mysterious email, hidden forces operating in the shadows, and events beyond human understanding threaten to challenge the very fabric of reality. Get ready for an adventure that will push the boundaries of the known."`,
+                faqTitle: "Game Launch FAQ",
+                faqItems: [
+                    { question: "📌 Will the game be released all at once or in chapters?", answer: "The game will be released in episodic format. This means that the chapters will be released progressively." },
+                    { question: "📌 How many chapters will there be in total?", answer: "The game will have a total of six or seven chapters. More information will be provided as development progresses." },
+                    { question: "📌 When will the next chapter be released?", answer: "The chapters will be released between 3-4 month intervals, although it can also be earlier." },
+                    { question: "📌 Will save files work across chapters?", answer: "Unfortunately, compatibility of save files between the different versions of the game has not been achieved, so it is recommended to finish the previous chapter before installing updates." },
+                    { question: "📌 Is the game free?", answer: "Yes, until the release of the final chapter the game will be available for free download. After that, the possibility of pricing the full game will be evaluated." },
+                    { question: "📌 Will it be available in other languages?", answer: "Currently, only Spanish and English." }
+                ],
+                translateBtn: "Cambiar a Español"
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'es';
+
+        const elementsToTranslate = {
+            navHome: document.getElementById('nav-home'),
+            navProjects: document.getElementById('nav-projects'),
+            navDownload: document.getElementById('nav-download'),
+            navAbout: document.getElementById('nav-about'),
+            navContact: document.getElementById('nav-contact'),
+            mainContentList: document.getElementById('main-content-list'),
+            mainContentDescription: document.getElementById('main-content-description'),
+            faqTitle: document.getElementById('faq-title'),
+            faqItems: document.getElementById('faq-items'),
+            translateBtn: document.getElementById('translate-btn')
+        };
+
+        function applyTranslations(language) {
+            const translation = translations[language];
+            for (let key in elementsToTranslate) {
+                const element = elementsToTranslate[key];
+                if (key === 'mainContentList') {
+                    element.innerHTML = translation.mainContentList
+                        .map(item => `<li>${item}</li>`)
+                        .join('');
+                } else if (key === 'mainContentDescription') {
+                    element.textContent = translation.mainContentDescription;
+                } else if (key === 'faqTitle') {
+                    element.textContent = translation.faqTitle;
+                } else if (key === 'faqItems') {
+                    element.innerHTML = translation.faqItems
+                        .map(item => `<details><summary>${item.question}</summary><p>${item.answer}</p></details>`)
+                        .join('');
+                } else if (element) {
+                    element.textContent = translation[key];
+                }
+            }
+            localStorage.setItem('language', language); // Guardar preferencia
+        }
+
+        document.getElementById('translate-btn').addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            applyTranslations(currentLanguage);
+        });
+
+        applyTranslations(currentLanguage);
+    </script>
+</body>
+</html>
+
