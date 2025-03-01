@@ -204,6 +204,40 @@ img[src^="screenshot"] {
     text-align: right;
 }
 
+.progress-img {
+    position: relative;
+    left: -200px; /* Ajusta según necesites */
+}
+
+/* En móvil, que se mantenga centrado */
+@media (max-width: 768px) {
+    .progress-img {
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.screenshots-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que no se desborde en pantallas más pequeñas */
+    justify-content: center; /* Centrar las imágenes */
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+.screenshots-container img {
+    width: calc(33.33% - 10px); /* 3 imágenes por fila */
+    max-width: 500px; /* Ajusta el tamaño si es necesario */
+    height: auto;
+}
+
+/* En móvil, que se apilen */
+@media (max-width: 768px) {
+    .screenshots-container img {
+        width: 100%; /* Una imagen por fila */
+    }
+}
+
+
 /* FAQ */
 .faq-section {
     max-width: 800px;
