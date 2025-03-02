@@ -288,12 +288,14 @@ max-width: 100%;
  height: auto;
 }
 #descarga-link {
-    font-family: 'Merriweather', serif;
-    line-height: 1.2;
+    font-family: 'Merriweather', serif;  
     font-size: 45px;
     padding: 3px;
-   max-width: 100%;
-   line-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espacio entre el emoji y el texto */
+    white-space: nowrap; /* Evita que se divida en varias líneas */
 }
 
 /* FAQ */
@@ -317,7 +319,18 @@ max-width: 100%;
     margin: 10px 0;
     font-family: 'Tu-Fuente', sans-serif;
 }
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px; /* Máximo tamaño en pantallas grandes */
+    margin: 0 auto; /* Centrar en la página */
+}
 
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
+    height: auto;
+}
 
 
 
