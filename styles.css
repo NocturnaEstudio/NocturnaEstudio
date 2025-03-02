@@ -97,7 +97,37 @@ main img {
         flex-direction: column;
     }
 }
+/* Sección de actualización */
+.last-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
 
+.last-update div {
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Imágenes dentro del main */
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .last-update {
+        flex-direction: column;
+    }
+}
 /* Botón de cambio de idioma */
 #translate-btn {
     position: absolute;
@@ -241,6 +271,28 @@ img[src^="screenshot"] {
     }
 }
 
+.itchio-page img {
+    width: 300px; /* Ajusta el tamaño según prefieras */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Asegura que no tenga espacios extra */
+    padding: 30px;:
+}
+
+#gamelogo {
+  width: 200px; /* Cambia el tamaño */
+  display: block;
+ padding: 5px;
+ width: 1200px;
+  margin: 0 auto; /* Centrar la imagen */
+max-width: 100%;
+ height: auto;
+}
+#descarga-link {
+    font-family: 'Merriweather', serif;
+    line-height: 1.2;
+    font-size: 45px;
+    padding: 3px;
+}
 
 /* FAQ */
 .faq-section {
@@ -263,3 +315,6 @@ img[src^="screenshot"] {
     margin: 10px 0;
     font-family: 'Tu-Fuente', sans-serif;
 }
+
+
+
