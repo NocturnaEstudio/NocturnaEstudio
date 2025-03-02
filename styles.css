@@ -1,0 +1,385 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Portmanteau', sans-serif;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 200px;
+}
+
+header img {
+    width: 150%;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos del menú de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #666;
+}
+
+/* Estilo del contenido principal */
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sección de proyectos */
+.currently-developing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.currently-developing div {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Imágenes dentro del main */
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .currently-developing {
+        flex-direction: column;
+    }
+}
+/* Sección de actualización */
+.last-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.last-update div {
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Imágenes dentro del main */
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .last-update {
+        flex-direction: column;
+    }
+}
+/* Botón de cambio de idioma */
+#translate-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#translate-btn:hover {
+    background-color: #555;
+}
+
+/* Estilos del footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+/* Iconos sociales */
+.boton-youtube { background-image: url('youtube.png'); }
+.boton-instagram { background-image: url('instagram.png'); }
+.boton-twitter { background-image: url('twitter.png'); }
+.boton-itchio { background-image: url('itchio.png'); }
+.boton-mail { background-image: url('mail.png'); }
+.boton-skyblue { background-image: url('Bluesky.png'); }
+
+.footer a {
+    background-size: 40px 40px;
+}
+
+/* Texto de derechos de autor */
+.footer p {
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    margin: 0;
+}
+
+/* Listas */
+ul, ol {
+    margin: 0;
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+li {
+    text-align: center;
+}
+
+/* Descripción del contenido principal */
+#main-content-description {
+    font-family: 'Merriweather', serif;
+    line-height: 1.2;
+    font-size: 25px;
+}
+
+/* Imágenes de capturas */
+img[src^="screenshot"] {
+    width: 400px;
+    height: auto;
+}
+
+/* Texto destacado */
+.highlight-red {
+    color: #ff0000;
+}
+
+/* Sección Acerca de */
+[id^="main-content-aboutus"] {
+    font-family: 'Merriweather', serif;
+    font-size: 23px;
+}
+
+#main-content-aboutus1, #main-content-aboutus2 {
+    text-align: justify;
+}
+
+#main-content-aboutus3, #main-content-aboutus5 {
+    text-align: left;
+}
+
+#main-content-aboutus4 {
+    text-align: right;
+}
+
+.progress-img {
+    position: relative;
+    left: -200px; /* Ajusta según necesites */
+}
+.ldg-tumblr {
+    margin: 10px; /* ajusta el valor según sea necesario */
+}
+
+/* En móvil, que se mantenga centrado */
+@media (max-width: 768px) {
+    .progress-img {
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.screenshots-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que no se desborde en pantallas más pequeñas */
+    justify-content: center; /* Centrar las imágenes */
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+.screenshots-container img {
+    width: calc(33.33% - 10px); /* 3 imágenes por fila */
+    max-width: 500px; /* Ajusta el tamaño si es necesario */
+    height: auto;
+}
+
+/* En móvil, que se apilen */
+@media (max-width: 768px) {
+    .screenshots-container img {
+        width: 100%; /* Una imagen por fila */
+    }
+}
+
+.itchio-page img {
+    width: 300px; /* Ajusta el tamaño según prefieras */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Asegura que no tenga espacios extra */
+    padding: 30px;:
+}
+
+#gamelogo {
+  width: 200px; /* Cambia el tamaño */
+  display: block;
+ padding: 5px;
+ width: 1200px;
+  margin: 0 auto; /* Centrar la imagen */
+max-width: 100%;
+ height: auto;
+}
+#descarga-link {
+    font-family: 'Merriweather', serif;  
+    font-size: 45px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espacio entre el emoji y el texto */
+    white-space: nowrap; /* Evita que se divida en varias líneas */
+}
+
+/* FAQ */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-section details {
+    margin-bottom: 10px;
+}
+
+.faq-section summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Tu-Fuente', sans-serif;
+}
+
+.faq-section p {
+    margin: 10px 0;
+    font-family: 'Tu-Fuente', sans-serif;
+}
+
+.last-update {
+    text-align: center; /* Centra el texto */
+    padding: 10px;
+font-family: 'Tu-Fuente', sans-serif;
+font-size: 1.5em;
+}
+
+.update-link {
+    margin-top: 10px;
+}
+
+.update-link a {
+    display: inline-block;
+    font-size: 1.0em;
+font-family: 'Tu-Fuente', sans-serif;
+    padding: 8px 15px;
+    background-color: #ff5e5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .last-update {
+        width: 100%;
+        padding: 10px; /* Espacio a los lados */
+        box-sizing: border-box; /* Evita que los padding reduzcan el ancho */
+    }
+
+    .last-update h2,
+    .last-update p,
+    .update-link {
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    .update-link {
+        margin-top: 10px;
+        padding-left: 0; /* Se elimina el padding para que empiece desde la izquierda */
+    }
+
+    .update-link a {
+        display: block; /* Hace que el enlace ocupe toda la línea */
+        width: 100%; /* Se expande a todo el ancho */
+        text-align: left; /* Asegura que el texto quede alineado a la izquierda */
+        font-size: 16px;
+    }
+}
+    .video-container {
+        display: flex;
+        justify-content: flex-start; /* Mueve el video un poco a la derecha */
+        align-items: center;
+        width: 100%;
+        padding-left: 10px; /* Ajusta el margen izquierdo */
+    }
+
+    .video-container iframe {
+        width: auto;
+        height: auto;
+        max-width: 560px;
+    }
+}
