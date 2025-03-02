@@ -338,6 +338,13 @@ width:auto;
 .last-update {
     text-align: center; /* Centra el texto */
     padding: 10px;
+font-family: 'Tu-Fuente', sans-serif;
+font-size: 1.5em;
+}
+@media only screen and (max-width: 768px) {
+.last-update {
+height: auto;
+width: auto;
 }
 
 .update-link {
@@ -354,6 +361,8 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
+
 
 
 
