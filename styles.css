@@ -328,11 +328,9 @@ width: auto;
 max-width: 100%;
 }
 
-/* Agrega esta regla para la versión de PC /
-@media only screen and (min-width: 768px) {
-.video-container {
-height: auto; / o cualquier otro valor que desees */
-width: auto;
+@media only screen and (max-width: 768px) {
+.video-container iframe {
+height: auto;
 }
 }
 
@@ -355,6 +353,8 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
+
 
 
 
