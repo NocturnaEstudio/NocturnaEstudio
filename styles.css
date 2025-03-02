@@ -292,6 +292,8 @@ max-width: 100%;
     line-height: 1.2;
     font-size: 45px;
     padding: 3px;
+   max-width: 100%;
+   line-height: auto;
 }
 
 /* FAQ */
@@ -315,6 +317,7 @@ max-width: 100%;
     margin: 10px 0;
     font-family: 'Tu-Fuente', sans-serif;
 }
+
 
 
 
