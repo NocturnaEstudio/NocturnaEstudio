@@ -22,7 +22,7 @@
     </nav>
 
 <main class="main-content">
-        <img src="g2.svg" />
+        <img id="gamelogo" src="g2.svg" alt="Logo del juego" />
         <ul id="main-content-list">
             <li>Aventura gráfica, Point & Click</li>
             <li>Misterio, Ciencia ficción, Aventura</li>
@@ -43,14 +43,23 @@
     <img src="screenshot5.png" />
     <img src="screenshot6.png" />
 </div>
-   
- <section class="faq-section">
-            <h2 id="faq-title">FAQ sobre el lanzamiento del juego</h2>
-            <div id="faq-items">
-                <!-- FAQ items will go here -->
-            </div>
-        </section>
-    </main>
+ 
+<div class="juego-descarga">
+<p id="descarga-link">
+         📥 DESCARGA EN 📥
+        </p> 
+    <a href="https://nocturna-estudio.itch.io/los-dias-de-geminis" target="_blank" class="itchio-page">
+        <img src="itchio2image.svg" alt="itchio page">
+    </a> <!-- ❗️ Cierre correcto de la etiqueta <a> -->
+</div>
+
+<section class="faq-section">
+    <h2 id="faq-title">FAQ sobre el lanzamiento del juego</h2>
+    <div id="faq-items">
+        <!-- FAQ items will go here -->
+    </div>
+</section>
+
 
     <button id="translate-btn" aria-label="Cambiar idioma">Switch to English</button>
 
@@ -81,6 +90,7 @@
                     "Windows"
                 ],
                 mainContentDescription: `"Un día, radiotelescopios de todo el mundo captaron señales de origen desconocido y propiedades enigmáticas. Intrigados por este fenómeno, el Centro de Investigaciones Extracurriculares (C.I.E.), fundado por el joven Alterio Rossi junto a sus amigos Héctor Mora y Macarena Flores, decide intervenir para descifrar el misterio. Lo que comienza como una misión científica pronto se convierte en algo mucho más grande de lo que imaginaban: un enigmático correo, fuerzas ocultas que operan en las sombras y eventos más allá de la comprensión humana amenazan con poner en jaque la realidad misma. Prepárate para una aventura que desafiará los límites de lo conocido."`,
+                juegodescarga: "📥 DESCARGA EN 📥",
                 faqTitle: "FAQ sobre el lanzamiento del juego",
                 faqItems: [
                     { question: "📌 ¿El juego saldrá completo o por capítulos?", answer: "El juego se lanzará en formato episódico. Esto significa que los capítulos se publicarán de manera progresiva." },
@@ -105,6 +115,7 @@
                     "Windows"
                 ],
                 mainContentDescription: `"One day, radio telescopes around the world picked up signals of unknown origin and enigmatic properties. Intrigued by this phenomenon, the Center for Inquiry on Extracurricular Studies (C.I.E.), founded by the young Alterio Rossi along with his friends Héctor Mora and Macarena Flores, decides to intervene to decipher the mystery. What begins as a scientific mission quickly turns into something much larger than they imagined: a mysterious email, hidden forces operating in the shadows, and events beyond human understanding threaten to challenge the very fabric of reality. Get ready for an adventure that will push the boundaries of the known."`,
+                juegodescarga: "📥 DOWNLOAD AT 📥",
                 faqTitle: "Game Launch FAQ",
                 faqItems: [
                     { question: "📌 Will the game be released all at once or in chapters?", answer: "The game will be released in episodic format. This means that the chapters will be released progressively." },
@@ -128,6 +139,7 @@
             navContact: document.getElementById('nav-contact'),
             mainContentList: document.getElementById('main-content-list'),
             mainContentDescription: document.getElementById('main-content-description'),
+            juegodescarga:document.getElementById('descarga-link'),
             faqTitle: document.getElementById('faq-title'),
             faqItems: document.getElementById('faq-items'),
             translateBtn: document.getElementById('translate-btn')
@@ -165,5 +177,7 @@
     </script>
 </body>
 </html>
+
+
 
 
