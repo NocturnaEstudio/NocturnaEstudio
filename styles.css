@@ -330,7 +330,7 @@ max-width: 100%;
 
     .video-container iframe {
         width: auto; /* Asegura que ocupe casi toda la pantalla */
-        height: 50vw; /* Mantiene una buena proporción en relación al ancho */
+        height: auto; /* Mantiene una buena proporción en relación al ancho */
         max-width: 560px; /* Evita que crezca demasiado en pantallas más grandes */
     }
 }
