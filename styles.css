@@ -341,9 +341,10 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
 @media (max-width: 768px) {
-    .last-update {
-        width: 100%;
+.last-update {
+        width: auto;
         padding: 10px; /* Espacio a los lados */
         box-sizing: border-box; /* Evita que los padding reduzcan el ancho */
     }
@@ -352,7 +353,7 @@ font-family: 'Tu-Fuente', sans-serif;
     .last-update p,
     .update-link {
         text-align: left;
-        width: 100%;
+        width: auto;
         max-width: 100%;
         display: block;
     }
@@ -364,22 +365,19 @@ font-family: 'Tu-Fuente', sans-serif;
 
     .update-link a {
         display: block; /* Hace que el enlace ocupe toda la línea */
-        width: 100%; /* Se expande a todo el ancho */
+        width : 200% px; /* Se expande a todo el ancho */
         text-align: left; /* Asegura que el texto quede alineado a la izquierda */
         font-size: 16px;
-    }
+    }    
+.video-container {
+    display: flex;
+    justify-content: center; /* Asegura que el video se mantenga centrado en escritorio */
+    align-items: center;
+    width: 100 %px;
 }
-    .video-container {
-        display: flex;
-        justify-content: flex-start; /* Mueve el video un poco a la derecha */
-        align-items: center;
-        width: 100%;
-        padding-left: 10px; /* Ajusta el margen izquierdo */
-    }
 
-    .video-container iframe {
-        width: auto;
-        height: auto;
-        max-width: 560px;
-    }
+.video-container iframe {
+    width: auto; /* Tamaño normal en escritorio */
+    height: auto;
+}
 }
