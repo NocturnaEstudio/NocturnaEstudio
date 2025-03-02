@@ -320,18 +320,10 @@ max-width: 100%;
     font-family: 'Tu-Fuente', sans-serif;
 }
 
-.video-container {
-position: relative;
-padding-bottom: 56.25%;
-height: auto;
-width: auto;
-max-width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
 .video-container iframe {
-height: auto;
-width:auto;
+  width: auto;
+  height: auto;
 }
 }
 
@@ -341,11 +333,6 @@ width:auto;
 font-family: 'Tu-Fuente', sans-serif;
 font-size: 1.5em;
 }
-@media only screen and (max-width: 768px) {
-.last-update {
-height: auto;
-width: auto;
-}
 
 .update-link {
     margin-top: 10px;
@@ -353,7 +340,7 @@ width: auto;
 
 .update-link a {
     display: inline-block;
-    font-size: 1.2em;
+    font-size: 1.0em;
 font-family: 'Tu-Fuente', sans-serif;
     padding: 8px 15px;
     background-color: #ff5e5e;
@@ -361,6 +348,7 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
 
 
 
