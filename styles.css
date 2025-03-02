@@ -323,15 +323,18 @@ max-width: 100%;
 @media (max-width: 768px) {
     .video-container {
         display: flex;
-        justify-content: center; /* Centra el video horizontalmente */
+        justify-content: center; /* Centra el video */
+        align-items: center; /* Asegura que se mantenga alineado */
+        width: 100%;
     }
 
     .video-container iframe {
-        width: 100%; /* O ajusta a un porcentaje menor si es necesario */
-        height: auto; /* Mantiene la proporción */
-        max-width: 560px; /* Evita que sea demasiado grande */
+        width: auto; /* Asegura que ocupe casi toda la pantalla */
+        height: 50vw; /* Mantiene una buena proporción en relación al ancho */
+        max-width: 560px; /* Evita que crezca demasiado en pantallas más grandes */
     }
 }
+
 
 
 .last-update {
