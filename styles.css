@@ -319,9 +319,12 @@ max-width: 100%;
     margin: 10px 0;
     font-family: 'Tu-Fuente', sans-serif;
 }
+
+/* Agrega esta regla para la versión de PC /
+@media only screen and (min-width: 768px) {
 .video-container {
-     max-width: 100%;
-  height: auto;
+height: 315px; / o cualquier otro valor que desees */
+}
 }
 
 .last-update {
@@ -343,6 +346,8 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
+
 
 
 
