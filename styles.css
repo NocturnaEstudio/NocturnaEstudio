@@ -320,17 +320,10 @@ max-width: 100%;
     font-family: 'Tu-Fuente', sans-serif;
 }
 .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 560px; /* Máximo tamaño en pantallas grandes */
-    margin: 0 auto; /* Centrar en la página */
+     max-width: 100%;
+  height: auto;
 }
 
-.video-container iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
-    height: auto;
-}
 .last-update {
     text-align: center; /* Centra el texto */
     padding: 10px;
@@ -350,6 +343,9 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
+
+
 
 
 
