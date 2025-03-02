@@ -320,6 +320,14 @@ max-width: 100%;
     font-family: 'Tu-Fuente', sans-serif;
 }
 
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+height: auto;
+width: auto;
+max-width: 100%;
+}
+
 /* Agrega esta regla para la versión de PC /
 @media only screen and (min-width: 768px) {
 .video-container {
@@ -346,6 +354,9 @@ font-family: 'Tu-Fuente', sans-serif;
     text-decoration: none;
     border-radius: 5px;
 }
+
+
+
 
 
 
