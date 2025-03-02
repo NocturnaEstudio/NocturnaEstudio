@@ -331,6 +331,27 @@ max-width: 100%;
     aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
     height: auto;
 }
+.last-update {
+    text-align: center; /* Centra el texto */
+    padding: 10px;
+}
+
+.update-link {
+    margin-top: 10px;
+}
+
+.update-link a {
+    display: inline-block;
+    font-size: 1.2em;
+font-family: 'Tu-Fuente', sans-serif;
+    padding: 8px 15px;
+    background-color: #ff5e5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
 
 
 
