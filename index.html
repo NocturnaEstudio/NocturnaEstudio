@@ -27,8 +27,27 @@
                 <h2 id="currently-developing-title">Actualmente en Desarrollo:</h2>
              <img src="Progress.svg" class="progress-img" />
             </div>
-           
         </div>
+ <div class="last-update">
+    <div>
+        <h2 id="clast-update-title">&#128680 Última actualización:</h2>
+        <p id="last-update">Avance y fecha de lanzamiento de "Los días de Géminis - Prólogo"</p>
+        
+        <!-- Nuevo div para centrar el video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y7-gUvTQJ_8?si=NNoRbldoPykqMWct" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Link colocado en un div separado para que aparezca abajo -->
+        <div class="update-link">
+            <a href="losdiasdegeminis.html">Los días de Géminis info</a>
+        </div>
+    </div>
+</div>
+
     </main>
 
     <button id="translate-btn" aria-label="Cambiar idioma">Switch to English</button>
@@ -47,41 +66,46 @@
 
 
 
-    <script>
-        const translations = {
-            es: {
-                navHome: "Principal",
-                navProjects: "Proyectos",
-                navDownload: "Descarga",
-                navAbout: "Sobre Nosotros",
-                navContact: "Contacto",
-                currentlyDevelopingTitle: "Actualmente en Desarrollo:",
-                translateBtn: "Switch to English"
-            },
-            en: {
-                navHome: "Home",
-                navProjects: "Projects",
-                navDownload: "Download",
-                navAbout: "About Us",
-                navContact: "Contact",
-                currentlyDevelopingTitle: "Currently in Development:",
-                currentlyDevelopingDesc: "Updates on our projects will appear here soon.",
-                translateBtn: "Cambiar a Español"
-            }
-        };
+  <script>
+    const translations = {
+        es: {
+            navHome: "Principal",
+            navProjects: "Proyectos",
+            navDownload: "Descarga",
+            navAbout: "Sobre Nosotros",
+            navContact: "Contacto",
+            currentlyDevelopingTitle: "Actualmente en Desarrollo:",
+            clastUpdateTitle: "Última actualización",
+            lastUpdate: "Avance y fecha de lanzamiento de 'Los días de Géminis - Prólogo'", // Agregadas comillas
+            translateBtn: "Switch to English"
+        },
+        en: {
+            navHome: "Home",
+            navProjects: "Projects",
+            navDownload: "Download",
+            navAbout: "About Us",
+            navContact: "Contact",
+            currentlyDevelopingTitle: "Currently in Development:",
+            clastUpdateTitle: "Last Update",
+            lastUpdate: "'Los días de Géminis - Prólogo' trailer and release date", // Comillas agregadas
+            translateBtn: "Cambiar a Español"
+        }
+    };
 
-        // Recuperar idioma guardado o usar español por defecto
-        let currentLanguage = localStorage.getItem('language') || 'es';
-        const elementsToTranslate = {
-            navHome: document.getElementById('nav-home'),
-            navProjects: document.getElementById('nav-projects'),
-            navDownload: document.getElementById('nav-download'),
-            navAbout: document.getElementById('nav-about'),
-            navContact: document.getElementById('nav-contact'),
-            currentlyDevelopingTitle: document.getElementById('currently-developing-title'),
-            currentlyDevelopingDesc: document.getElementById('currently-developing-desc'),
-            translateBtn: document.getElementById('translate-btn')
-        };
+    // Recuperar idioma guardado o usar español por defecto
+    let currentLanguage = localStorage.getItem('language') || 'es';
+
+    const elementsToTranslate = {
+        navHome: document.getElementById('nav-home'),
+        navProjects: document.getElementById('nav-projects'),
+        navDownload: document.getElementById('nav-download'),
+        navAbout: document.getElementById('nav-about'),
+        navContact: document.getElementById('nav-contact'),
+        currentlyDevelopingTitle: document.getElementById('currently-developing-title'),
+        clastUpdateTitle: document.getElementById('clast-update-title'),
+        lastUpdate: document.getElementById('last-update'), // Asegúrate de que el HTML tenga id="last-update"
+        translateBtn: document.getElementById('translate-btn')
+    };
 
 function applyTranslations(language) {
     const translation = translations[language];
