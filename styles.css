@@ -22,7 +22,42 @@ header img {
     display: block;
     margin: 0 auto;
 }
+@media (max-width: 1024px) {
+    header {
+        height: 15rem; /* Reducimos la altura */
+    }
+    header img {
+        max-width: 30rem; /* Imagen más pequeña */
+    }
+}
 
+/* 🔹 Breakpoint para tablets */
+@media (max-width: 768px) {
+    header {
+        height: 10rem;
+    }
+    header img {
+        max-width: 20rem;
+    }
+}
+/* 🔹 Breakpoint para celulares */
+@media (max-width: 320px) {
+    header {
+        height: 8rem;
+    }
+    header img {
+        max-width: 20rem;
+    }
+}
+/* 🔹 Breakpoint para celulares */
+@media (max-width: 480px) {
+    header {
+        height: 8rem;
+    }
+    header img {
+        max-width: 20rem;
+    }
+}
 /* Estilos del menú de navegación */
 nav {
     display: flex;
@@ -59,6 +94,88 @@ nav ul li a:hover {
     background-color: #666;
 }
 
+/* ===============================
+   Estilos para dispositivos de tablet (481px a 768px)
+   =============================== */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    padding: 0.5rem 1rem;
+    /* Ajusta el margin-left según convenga; evita un valor muy negativo que empuje el nav fuera de pantalla */
+    margin-left: -25px; 
+  }
+  
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0.3rem;
+  }
+  
+  nav ul li a {
+    font-size: 0.6rem;  /* Un poco menor que 1rem para este rango */
+    padding: 0.5em 0.8em; /* Ajusta el padding para que los botones no se vean tan grandes */
+  }
+}
+
+
+/* 🔹 MEDIA QUERY PARA PANTALLAS MÁS PEQUEÑAS (max-width: 480px) */
+@media (max-width: 480px) {
+    nav {
+        padding: 0rem;
+      margin-left: -5px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; /* Evita que se haga wrapping */
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    nav ul li {
+        margin: 0.1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente para que sea legible */
+        padding: 0.1em;
+    }
+nav ul li a.sobre-nosotros {
+    white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+}
+}
+
+/* 🔹 MEDIA QUERY PARA PANTALLAS MÁS PEQUEÑAS (max-width: 320px) */
+@media (max-width: 320px) {
+    nav {
+        padding: 0; /* Eliminar padding en versión móvil */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Asegúrate de que la dirección sea horizontal */
+        flex-wrap: nowrap; /* Evitar que se haga wrapping */
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0.1rem; /* Reducir el margen */
+    }
+
+    nav ul li a {
+        font-size: 0.6rem; /* Reducir el tamaño de la fuente */
+        padding: 0.2em 0.4em; /* Reducir el padding */
+    }
+nav ul li a.sobre-nosotros {
+    white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+}
+}
+
+
 /* Estilo del contenido principal */
 .main-content {
     padding: 20px;
@@ -90,13 +207,182 @@ main img {
     display: block;
     margin: 0 auto;
 }
+@media (min-width: 981px) and (max-width: 1199px) {
+  .main-content {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .currently-developing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  } 
+.currently-developing div {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: flex-end; /* Mueve la imagen a la derecha */
+}
+ 
+  #currently-developing-title {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto */
+    padding: 1px;
+    margin: 0;
+    align-self: flex-start;
+  }
+  
+ .progress-img {
+    max-width: 100%; /* Reduce el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-left: 55%; /* Empuja la imagen a la derecha */
+    padding: 5px;
+}
+}
+@media (min-width: 769px) and (max-width: 980px) {
+  .main-content {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .currently-developing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .currently-developing div {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 7.475rem;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  #currently-developing-title {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto */
+    padding: 1px;
+    margin: 0;
+  }
+  
+  .progress-img {
+    max-width: 100%; /* Hace que la imagen se ajuste al tamaño del contenedor */
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+}
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    .currently-developing {
-        flex-direction: column;
+    .main-content {
+    padding: 5px;
+    text-align: center;
+}
+.currently-developing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.currently-developing div {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 7.475rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+#currently-developing-title {
+        font-size: 0.8rem; /* Ajusta el tamaño del texto */
+        padding: 1px;
+        margin: 0;
+    }
+
+    /* Opcional: Ajustar la imagen si es necesario */
+    .progress-img {
+        max-width: 100%; /* Hace que la imagen se ajuste al tamaño del contenedor */
+        width:100%;
+        height: 100%;
+        padding: 5px;
     }
 }
+@media (max-width: 480px) {
+    .main-content {
+    padding: 5px;
+    text-align: center;
+}
+.currently-developing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.currently-developing div {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 6.375rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+#currently-developing-title {
+        font-size: 0.6rem; /* Ajusta el tamaño del texto */
+        padding: 1px;
+        margin: 0;
+    }
+
+    /* Opcional: Ajustar la imagen si es necesario */
+    .progress-img {
+        max-width: 100%; /* Hace que la imagen se ajuste al tamaño del contenedor */
+        width:100%;
+        height: 100%;
+        padding: 5px;
+    }
+}
+@media (max-width: 320px) {
+    .main-content {
+    padding: 5px;
+    text-align: center;
+}
+.currently-developing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.currently-developing div {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 7.375rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+#currently-developing-title {
+        font-size: 0.6rem; /* Ajusta el tamaño del texto */
+        padding: 1px;
+        margin: 0;
+    }
+
+    /* Opcional: Ajustar la imagen si es necesario */
+    .progress-img {
+        max-width: 100%; /* Hace que la imagen se ajuste al tamaño del contenedor */        
+        height: 100%;
+        padding: 5px;
+    }
+}
+
 /* Sección de actualización */
 .last-update {
     display: flex;
@@ -113,6 +399,113 @@ main img {
     box-sizing: border-box;
     text-align: left;
 }
+@media (max-width: 768px) {
+    .last-update {
+    padding: 5px;
+    text-align: center;
+}
+.last-update div {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+#clast-update-title {
+ font-size: 1.9rem;
+   text-align: center;
+   max-width: 100%;
+transform: translateX(30px); 
+}
+#last-update {
+display: block;          /* Asegura que es un elemento de bloque */
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;             /* Ocupa el 100% del contenedor */
+  max-width: 100%;   
+}
+}
+@media (max-width: 480px) {
+    .last-update {
+    padding: 5px;
+    text-align: center;
+}
+.last-update div {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+#clast-update-title {
+ font-size: 0.2rem;
+   text-align: center;
+   max-width: 100%;
+transform: translateX(20px); 
+}
+#last-update {
+display: block;          /* Asegura que es un elemento de bloque */
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;             /* Ocupa el 100% del contenedor */
+  max-width: 100%;   
+}
+}
+
+/* =============================
+   Estilos para pantallas de 320px o menos
+   ============================= */
+@media (max-width: 320px) {
+  .last-update {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .last-update div {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  /* Título en pantallas pequeñas: */
+  #clast-update-title {
+    font-size: 1.0rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    transform: translateX(1px); /* Ajusta según necesites */
+    /* white-space no es necesario aquí si deseas que el texto se ajuste */
+  }
+  
+  #last-update {
+    display: block;
+    font-size: 1.0rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* =============================
+   Estilos para pantallas mayores a 320px
+   (usamos min-width: 321px para que no se solapen)
+   ============================= */
+@media (min-width: 321px) {
+  /* Aquí definimos el estilo del título para resoluciones mayores */
+  #clast-update-title {
+    font-size: 1.5rem;     /* Tamaño de fuente mayor para resoluciones más amplias */
+    text-align: center;
+    width: 320px;          /* Fija el ancho a 320px para mantener el formato */
+    margin: 0 auto;        /* Centra el elemento */
+    position: relative;    /* Permite desplazar el elemento con left/right */
+    left: -25px;           /* Mueve el elemento 25px a la izquierda */
+    white-space: nowrap;   /* Evita que el título se divida en dos líneas */
+    padding: 0;
+  }
+}
+
 
 /* Imágenes dentro del main */
 main img {
@@ -122,12 +515,6 @@ main img {
     margin: 0 auto;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .last-update {
-        flex-direction: column;
-    }
-}
 /* Botón de cambio de idioma */
 #translate-btn {
     position: absolute;
@@ -144,6 +531,33 @@ main img {
 
 #translate-btn:hover {
     background-color: #555;
+}
+@media (max-width: 768px) {
+    #translate-btn {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    padding: 2px;
+    font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+    #translate-btn {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    padding: 2px;
+    font-size: 12px;
+    }
+}
+@media (max-width: 320px) {
+    #translate-btn {
+      position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px;
+    font-size: 10px;
+    }
 }
 
 /* Estilos del footer */
@@ -381,3 +795,4 @@ font-family: 'Tu-Fuente', sans-serif;
     height: auto;
 }
 }
+
