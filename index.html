@@ -32,7 +32,7 @@
  <div class="last-update">
     <div>
         <h2 id="clast-update-title">🚨 Última actualización:</h2>
-        <p id="last-update">Avance y fecha de lanzamiento de "Los días de Géminis - Prólogo"</p>
+        <p id="last-update">Ya disponible [Los días de Géminis - Prólogo] en itch.io</p>
         
         <!-- Nuevo div para centrar el video -->
         <div class="video-container">
@@ -42,11 +42,15 @@
             </iframe>
         </div>
 
-        <!-- Link colocado en un div separado para que aparezca abajo -->
-        <div class="update-link">
-            <a href="losdiasdegeminis.html">Los días de Géminis info</a>
-        </div>
     </div>
+ 
+<div class="juego-descarga">
+<p id="descarga-link">
+         📥 DESCARGA EN 📥
+        </p> 
+    <a href="https://nocturna-estudio.itch.io/los-dias-de-geminis" target="_blank" class="itchio-page">
+        <img src="itchio2image.svg" alt="itchio page">
+    </a> <!-- ❗️ Cierre correcto de la etiqueta <a> -->
 </div>
 
     </main>
@@ -77,7 +81,8 @@
             navContact: "Contacto",
             currentlyDevelopingTitle: "Actualmente en Desarrollo:",
             clastUpdateTitle: "🚨 Última actualización",
-            lastUpdate: "Avance y fecha de lanzamiento de 'Los días de Géminis - Prólogo'", // Agregadas comillas
+            lastUpdate: "¡Ya disponible [Los días de Géminis - Prólogo] en itch.io!", // Agregadas comillas
+            juegodescarga: "📥 DESCARGA EN 📥",
             translateBtn: "Switch to English"
         },
         en: {
@@ -88,7 +93,8 @@
             navContact: "Contact",
             currentlyDevelopingTitle: "Currently in Development:",
             clastUpdateTitle: "🚨 Last Update",
-            lastUpdate: "'Los días de Géminis - Prólogo' trailer and release date", // Comillas agregadas
+            lastUpdate: "Now avalible [Los días de Géminis - Prólogo] on itch.io!", // Comillas agregadas
+            juegodescarga: "📥 DOWNLOAD AT 📥",
             translateBtn: "Cambiar a Español"
         }
     };
@@ -103,6 +109,7 @@
         navAbout: document.getElementById('nav-about'),
         navContact: document.getElementById('nav-contact'),
         currentlyDevelopingTitle: document.getElementById('currently-developing-title'),
+         juegodescarga:document.getElementById('descarga-link'),
         clastUpdateTitle: document.getElementById('clast-update-title'),
         lastUpdate: document.getElementById('last-update'), // Asegúrate de que el HTML tenga id="last-update"
         translateBtn: document.getElementById('translate-btn')
@@ -138,5 +145,3 @@ applyTranslations(currentLanguage);
     </script>
 </body>
 </html>
-
-
