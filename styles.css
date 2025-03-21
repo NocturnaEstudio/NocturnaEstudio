@@ -488,6 +488,7 @@ display: block;          /* Asegura que es un elemento de bloque */
   }
 }
 
+
 /* =============================
    Estilos para pantallas mayores a 320px
    (usamos min-width: 321px para que no se solapen)
@@ -795,4 +796,55 @@ font-family: 'Tu-Fuente', sans-serif;
     height: auto;
 }
 }
+@media (max-width: 1280px) {
+  .iframe-container {
+      justify-content: center;
+      align-items: center;
+       
+  }
+
+  .iframe-container iframe {
+   max-width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .iframe-container {
+     
+      height: auto; /* Ajusta la altura automáticamente */
+      
+  }
+
+  .iframe-container iframe {
+    
+       margin-left: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .iframe-container {
+     
+      height: auto; /* Ajusta la altura automáticamente */
+      
+  }
+
+  .iframe-container iframe {
+    scale: 0.9;
+      margin-left: -100px;
+  }
+}
+
+@media (max-width: 320px) {
+  .iframe-container {
+     overflow: auto;
+      height: auto; /* Ajusta la altura automáticamente */
+      
+  }
+
+  .iframe-container iframe {
+   
+      margin-left: -45px;
+  }
+}
+
+  
+
 
